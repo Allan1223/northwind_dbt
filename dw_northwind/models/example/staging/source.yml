@@ -1,0 +1,65 @@
+version: 2
+
+sources:
+  - name: northwind_etl
+    description: Essa é uma replica da tablea do Postgres usada na empresa NorthWind
+    tables:
+      - name: products
+        description: Essa tabela contém informações sobre os produtos da Northwind
+        columns:
+          - name: product_id
+            description: Chave primaria da tabela products
+            tests:
+              - unique
+              - not_null
+        
+      - name: customers
+        description: Essa tabela contém informações sobre os clientes da Northwind
+        columns:
+          - name: customer_id
+            description: Chave primaria da tabela customers
+            tests:
+              - unique
+              - not_null      
+
+      - name: shippers
+        description: Essa tabela contém informações sobre os entregadores da Northwind
+        columns:
+          - name: shipper_id
+            description: Chave primaria da tabela shippers
+            tests:
+              - unique
+              - not_null  
+
+      - name: employees
+        description: Essa tabela contém informações sobre os Funcionarios da Northwind
+        collumns:
+          - name: employee_id
+            description: Chave primaria da tabela employees
+            tests:
+              - unique
+              - not_null    
+
+      
+      - name: orders
+        description: Essa tabela contém informações sobre as ordens de vendas da Northwind
+        columns:
+          - name: order_id
+            description: Chave primaria da tabela orders
+                        
+
+      - name: order_details
+        description: Essa tabela contém informações sobre os itens das ordens de vendas da Northwind
+        columns:
+          - name: order_id
+            description: Chave primaria da tabela order_details
+                 
+
+      - name: suppliers
+        description: Essa tabela contém informações sobre fornecedores da Northwind
+        columns:
+          - name: supplier_id
+            description: Chave primaria da tabela suppliers
+            tests:
+              - unique
+              - not_null                                        
