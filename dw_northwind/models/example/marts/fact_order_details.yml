@@ -1,0 +1,52 @@
+version: 2
+
+models:
+    - name: fact_order_details
+      description: Tabela de fato de vendas.
+      columns: 
+        - name: order_id
+          description: Chave natural da tabela orders
+          tests:            
+            - not_null
+
+        - name: customer_fk
+          description: Chave estrangeira da dimensão customers
+          tests:            
+            - not_null 
+            - relationships:
+                 to: ref('dim_customers')
+                 field: customer_sk   
+
+        - name: employee_fk
+          description: Chave estrangeira da dimensão employees
+          tests:            
+            - not_null 
+            - relationships:
+                 to: ref('dim_employees')
+                 field: employee_sk      
+
+        - name: shipper_fk
+          description: Chave estrangeira da dimensão shippers
+          tests:            
+            - not_null 
+            - relationships:
+                 to: ref('dim_shippers')
+                 field: shipper_sk 
+
+        - name: product_fk
+          description: Chave estrangeira da dimensão products
+          tests:            
+            - not_null 
+            - relationships:
+                 to: ref('dim_products')
+                 field: product_sk     
+
+        - name: supplier_fk
+          description: Chave estrangeira da dimensão suppliers
+          tests:            
+            - not_null 
+            - relationships:
+                 to: ref('dim_suppliers')
+                 field: supplier_sk     
+
+       
