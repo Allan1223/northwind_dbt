@@ -1,0 +1,66 @@
+version: 2
+
+models:
+    - name: dim_employees
+      description: Essa tabela contém a dimenssão empregados 
+      columns:
+        - name: employee_sk
+          description:  Chave surrogate da tabela dimensão de empregados 
+          tests:
+            - unique
+            - not_null
+
+        - name: employee_id
+          description: Chave primária de empregados  
+
+        - name: title
+          description: Título do Empregado
+        
+        - name: title_of_courtesy
+          description:  Título de cortesia do Empregado
+        
+        - name: first_name
+          description:  Fax do cliente
+
+        - name: last_name
+          description:  Codigo postal do Empregado.     
+
+        - name: address
+          description: Endereço do Empregado.
+
+        - name:  postal_code
+          description: Código postal do Empregado.
+
+        - name:  city
+          description: Cidade do Empregado . 
+
+        - name: region
+          description: Região do Empregado.
+
+        - name: extension
+          description: Extenção do Empregado
+            
+        - name: home_phone
+          description: Telefone fixo do Empregado
+
+        - name: hire_date
+          description: Data da contratação do Empregado 
+
+        - name: birth_date
+          description: Data de nascimento do Empregado
+
+        - name: photo_path
+          description: Diretório da foto do Empregado   
+
+        - name: reports_to
+          description: Report para os empregados
+
+        - name: country
+          description: País do Fonecedor.
+
+        - name: notes  
+          description: Anotações do Empregado     
+        
+        
+
+        

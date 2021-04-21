@@ -1,0 +1,67 @@
+     version: 2
+
+models:
+    - name: dim_products
+      description: Essa tabela contém a dimessão produtos
+      columns:
+        - name: product_sk
+          description: Chave surrogate da tabela dimensão de produtos. 
+          tests:
+              - unique
+              - not_null
+        
+        - name: product_id
+          description: Chave primária de produtos 
+          tests:
+            - unique
+            - not_null
+
+        - name: category_id
+          description: Id da Categoria
+
+        - name: supplier_id
+          description: Id do Fonecedor
+        
+        - name: product_name 
+          description:  Fax do cliente
+
+        - name: units_in_stock
+          description:  Código postal do Fornecedor
+
+        - name: unit_price 
+          description: Endereço do Fornecedor  
+
+        - name: quantity_per_unit
+          description: Código postal do Fornecedor
+
+        - name: reorder_level
+          description: Cidade do Fornecedor  
+
+        - name: units_on_order
+          description: Região do Fornecedor
+
+        - name: is_discontinued
+          description: País do Fonecedor
+
+        - name: last_etl_run
+          description: Extenção do Fornecedor
+            
+        - name: home_phone
+          description: Telefone fixo do Fornecedor
+
+        - name: hire_date
+          description: Data da contratação do Fornecedor 
+
+        - name: birth_date
+          description: Data de nascimento do Fornecedor
+
+        - name: photo_path
+          description: Diretório da foto do Fornecedor 
+
+        - name: notes
+          description: Anotações do Fornecedor
+
+        - name: reports_to
+          description: reports_to Fornecedor
+                
+          

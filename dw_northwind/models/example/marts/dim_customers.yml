@@ -1,0 +1,41 @@
+version: 2
+
+models: 
+    - name: dim_customers
+      description: Essa tabela contém a dimessão clientes 
+      columns:
+        - name: customer_sk
+          description:  Chave surrogate da tabela dimensão de clientes
+          tests:
+            - unique
+            - not_null
+
+        - name: customer_id
+          description:  Chave primária de Clientes 
+        
+        - name: country
+          description:  País do cliente 
+
+        - name: city
+          description:  Cidade do cliente
+
+        - name: fax
+          description:  Fax do cliente
+
+        - name: postal_code  
+          description:  Código postal do cliente      
+      
+        - name: address
+          description: Endereço do cliente 
+
+        - name: contact_name
+          description: Nome para contato do cliente
+
+        - name: phone
+          description: Telefone do cliente
+
+        - name: company_name
+          description: Empresa do cliente 
+          
+        - name: contact_title
+          description: Título do cliente   

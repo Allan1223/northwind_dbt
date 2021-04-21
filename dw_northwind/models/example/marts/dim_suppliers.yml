@@ -1,0 +1,54 @@
+version: 2
+
+models:      
+    - name: dim_suppliers
+      description: Essa tabela contém dimenssão Fornecedores 
+      columns:
+        - name: supplier_sk
+          description: Chave primária da dimensão fornecedores    
+          tests:
+            - unique
+            - not_null   
+        
+        - name: supplier_id
+          description: Chave primária da tabela suppliers
+      
+        - name: address
+          description: Endereço do Fornecedor          
+
+        - name: postal_code
+          description: Código Postal do Fornecedor
+
+        - name: city
+          description: Cidade do Fornecedor
+
+        - name: region
+          description: Cidade do Fornecedor
+
+        - name: country
+          description: Cidade do Fornecedor
+
+        - name: division 
+          description: Divisão baseada no seed_suppliers_divisions
+
+        - name: fax
+          description: Fax do Fornecedor
+
+        - name: homepage
+          description: Pagina Web do Fornecedor
+
+        - name: phone
+          description: Telefone do Fornecedor
+
+        - name: company_name
+          description: Nome da empresa do Fornecedor
+
+        - name: contact_title
+          description: Título do contato do Fornecedor  
+
+        		
+           
+        			
+        		
+        			
+        
